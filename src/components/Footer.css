@@ -1,0 +1,27 @@
+.footer {
+  background-color: #1a1a1a;
+  color: #eee;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.project-name {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.tg-main-btn {
+  display: inline-block;
+  background-color: #229ED9;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.tg-main-btn:hover {
+  background-color: #1b8bbf;
+}

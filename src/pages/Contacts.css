@@ -1,0 +1,123 @@
+.contacts-page {
+  position: relative;
+  padding: 20px;
+  color: #eee;
+}
+
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/images/bg-contacts.jpg') center/cover no-repeat;
+  filter: blur(6px) brightness(0.4);
+  z-index: -1;
+}
+
+.contacts-page h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease forwards;
+}
+
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.contact-card {
+  background: rgba(36, 36, 36, 0.85);
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  animation: slideUp 0.8s ease forwards;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 12px rgba(46, 204, 113, 0.5);
+}
+
+.contact-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 2px solid rgba(255,255,255,0.1);
+}
+
+.role {
+  color: #2ecc71;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.contact-actions {
+  margin-bottom: 10px;
+}
+
+.tg-button {
+  display: inline-block;
+  background-color: #229ED9;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.tg-button:hover {
+  background-color: #1b8bbf;
+}
+
+.id-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.player-id {
+  background: #1e1e1e;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+.copy-btn {
+  background: #444;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.copy-btn:hover {
+  background: #666;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .contacts-page {
+    padding: 12px;
+  }
+}
